@@ -1,0 +1,13 @@
+.list{
+    color: #fff;
+    width: 300px;
+    background-color: rgb(174, 177, 182);
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 5px;
+
+}
+.list p{
+    padding: 10px;
+    /* position: relative; */
+}
