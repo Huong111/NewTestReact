@@ -2,11 +2,11 @@ body{
   background-color: rgb(238, 236, 238);
 }
 .App{
-  background-color: rgb(225, 236, 236);
+  background-color: rgb(223, 236, 236);
   min-height: 500px;
   width: 400px;
   margin: 40px auto;
- 
+  overflow: auto;
 
 }
 #ListItem input{
@@ -31,4 +31,8 @@ body{
   cursor: pointer;
   font-weight: bolder;
   color: white;
+}
+
+.options-holder{
+  overflow-y: auto;
 }

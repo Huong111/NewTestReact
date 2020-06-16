@@ -9,5 +9,17 @@
 }
 .list p{
     padding: 10px;
-    /* position: relative; */
+    position: relative;
+    /* text-align: center; */
 }
+ .countClick button{
+position: absolute;
+right: 10px;
+height: 20x;
+  width: 60px;
+  border-radius: 5px;
+  background-color: rgb(210, 193, 226);
+  cursor: pointer;
+  font-weight: bolder;
+  color: white;
+ }

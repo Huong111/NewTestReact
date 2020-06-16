@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
-import ListItems from './ListItem';
+import ListItems from "./ListItem";
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state ={count :0}
     this.state = {
       items: [],
       currentItem: {
@@ -15,28 +16,31 @@ class App extends Component {
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
   }
+  
   handleInput(e) {
     this.setState({
       currentItem: {
         text: e.target.value,
         key: Date.now(),
-      }
+      },
     });
   }
   addItem(e) {
     e.preventDefault();
     const newItem = this.state.currentItem;
-    if(newItem.text!==""){
-      const newItems=[...this.state.items, newItem];
+    if (newItem.text !== "") {
+      const newItems = [...this.state.items, newItem];
       this.setState({
         items: newItems,
-        currentItem:{
-          text:'',
-          key:'',
-        }
-      })
+
+        currentItem: {
+          text: "",
+          key: "",
+        },
+      });
     }
   }
+
   render() {
     return (
       <div className="App">
@@ -51,7 +55,9 @@ class App extends Component {
             <button type="submit">Add</button>
           </form>
         </header>
-    <ListItems items= {this.state.items}></ListItems>
+        <ListItems items={this.state.items}
+        
+        ></ListItems>
       </div>
     );
   }
